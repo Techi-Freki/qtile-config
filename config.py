@@ -11,7 +11,7 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 from myqtile.colors import Colors
 from myqtile.icons import Icons
 from myqtile.hooks import autostart
-from myqtile.functions import name_screenshot
+# from myqtile.functions import name_screenshot
 from myqtile.open_weather import geolocation, city_id
 
 mod = "mod4"
@@ -67,12 +67,9 @@ keys = [
     Key([mod], "r", lazy.spawn("rofi -show drun -show-icons"), desc="Launch an application with Rofi"),
     Key([mod], "b", lazy.spawn("brave"), desc="Launch the Brave browser"),
     Key([mod], "e", lazy.spawn("thunar"), desc="Launch the Thunar file manager"),
-
-# TODO: Make a name_screenshot() method
-
-    Key(["print"], lazy.application(f"gscreenshot -f {os.cwd() + '/Pictures/' + name_screenshot()}"), desc="Launch the Thunar file manager"),
-    Key([mod, "control"], "print", lazy.application(f"gnome-screenshot -a -f {os.cwd() + '/Pictures/' + name_screenshot()}"), desc="Launch the Thunar file manager"),
-    Key([mod, "alt"], "print", lazy.application(f"gnome-screenshot -w -f {os.cwd() + '/Pictures/' + name_screenshot()}"), desc="Launch the Thunar file manager"),
+    # Key(["print"], lazy.application(f"gscreenshot -f {os.cwd() + '/Pictures/' + name_screenshot()}"), desc="Launch the Thunar file manager"),
+    # Key([mod, "control"], "print", lazy.application(f"gnome-screenshot -a -f {os.cwd() + '/Pictures/' + name_screenshot()}"), desc="Launch the Thunar file manager"),
+    # Key([mod, "alt"], "print", lazy.application(f"gnome-screenshot -w -f {os.cwd() + '/Pictures/' + name_screenshot()}"), desc="Launch the Thunar file manager"),
 ]
 
 # Add key bindings to switch VTs in Wayland.
