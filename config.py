@@ -1,18 +1,18 @@
 import os
 
-from libqtile import bar, layout, qtile, widget
+from libqtile import bar, layout, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 from qtile_extras import widget
-from qtile_extras.widget.decorations import PowerLineDecoration
 
 from myqtile.colors import Colors
 from myqtile.icons import Icons
 from myqtile.hooks import autostart
 # from myqtile.functions import name_screenshot
 from myqtile.open_weather import geolocation, city_id
+from myqtile.decorations import MyDecorations
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -145,9 +145,8 @@ widget_defaults = dict(
     fontsize=12,
     padding=3,
 )
-extension_defaults = widget_defaults.copy()
 
-powerline = { "decorations": [ PowerLineDecoration() ] }
+powerline = MyDecorations.get_decorations()
 
 _screens = [
     Screen(
