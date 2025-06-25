@@ -149,7 +149,7 @@ extension_defaults = widget_defaults.copy()
 
 powerline = { "decorations": [ PowerLineDecoration() ] }
 
-screens = [
+_screens = [
     Screen(
         top=bar.Bar(
             [
@@ -203,6 +203,11 @@ screens = [
             32,
         ),
     ),
+]
+
+screens = [
+        _screens[1],
+        _screens[0]
 ]
 
 # Drag floating layouts.
