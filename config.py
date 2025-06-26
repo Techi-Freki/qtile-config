@@ -12,7 +12,7 @@ from myqtile.icons import Icons
 from myqtile.hooks import autostart
 # from myqtile.functions import name_screenshot
 from myqtile.open_weather import geolocation, city_id
-from myqtile.decorations import MyDecorations
+from myqtile.bars.decorations import MyDecorations
 
 mod = "mod4"
 terminal = guess_terminal()
