@@ -20,5 +20,5 @@ class WidgetFactory(object):
     @staticmethod
     def _init(type: str, font: str, fontsize: int, padding: int, **attr):
         widgets = WidgetFactory.generate_list()
-        requested_widget = next((item for item in widgets if item["name"] == type), None)
+        requested_widget = next((item for item in widgets if item["name"] == type))
         return requested_widget["obj"](font=font, fontsize=fontsize, padding=padding, **attr)
