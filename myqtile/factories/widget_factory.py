@@ -6,8 +6,8 @@ from qtile_extras import widget
 
 class WidgetFactory(object):
     @staticmethod
-    def init(type: str, font: str, fontsize: int, padding: int, **attr):
-        return WidgetFactory._init(type, font, fontsize, padding, **attr)
+    def init(widget_type: str, font: str, fontsize: int, padding: int, **attr):
+        return WidgetFactory._init(widget_type, font, fontsize, padding, **attr)
 
     @staticmethod
     def generate_list() -> list:
@@ -18,7 +18,7 @@ class WidgetFactory(object):
         return widgets
 
     @staticmethod
-    def _init(type: str, font: str, fontsize: int, padding: int, **attr):
+    def _init(widget_type: str, font: str, fontsize: int, padding: int, **attr):
         widgets = WidgetFactory.generate_list()
-        requested_widget = next((item for item in widgets if item["name"] == type))
+        requested_widget = next((item for item in widgets if item["name"] == widget_type))
         return requested_widget["obj"](font=font, fontsize=fontsize, padding=padding, **attr)

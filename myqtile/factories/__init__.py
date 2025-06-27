@@ -1,1 +1,1 @@
-from myqtile.factories import WidgetFactory
+from myqtile.factories.widget_factory import WidgetFactory
