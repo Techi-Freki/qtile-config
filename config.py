@@ -205,8 +205,8 @@ _screens = [
 ]
 
 screens = [
-        _screens[1],
-        _screens[0]
+        _screens[0],
+        _screens[1]
 ]
 
 # Drag floating layouts.
